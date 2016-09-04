@@ -10,6 +10,21 @@ public class Main {
 		Node head=new Node(1,c);
 		//System.out.println(kToLast(head, 5));
 	}
+	
+	//delete a node in the middle of a singly linked list
+	// we could only access to that node
+	//swith values, delete n.next
+	public static boolean deleteNode(Node n){
+		if(n==null || n.next==null) return false;
+		n.data=n.next.data;
+		n.next=n.next.next;
+		return true;
+	}
+	
+	//talk about the case when the node is the last one
+	//make the node as dummy
+	
+	
 
 
 }
